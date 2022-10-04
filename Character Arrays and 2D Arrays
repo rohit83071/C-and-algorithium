@@ -1,0 +1,29 @@
+//to remove the spaces from  a string array
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+void trimSpaces(char input[]) {
+   int count=0;
+    for(int i=0;i!='0';i++){
+count++;
+    }
+    
+    for(int i=0; i<count;i++){
+     char temp;
+        if(input[i]==' '){
+         for(int j=i;j<count;j++){
+             input[j]=input[j+1];
+             
+         }
+            count--;
+        }
+       }
+    }
+    int main() {
+    char input[1000000];
+    cin.getline(input, 1000000);
+    trimSpaces(input);
+    cout << input << endl;
+}
